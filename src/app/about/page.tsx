@@ -3,10 +3,11 @@
 import ReactLenis from "lenis/react";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from "@/components/navbar/NavbarLayoutFloatingInline";
-import ContactCTA from "@/components/sections/contact/ContactCTA";
+import AboutMetric from "@/components/sections/about/AboutMetric";
+import { Users, Globe, Zap } from "lucide-react";
 import FooterLogoReveal from "@/components/sections/footer/FooterLogoReveal";
 
-export default function ContactPage() {
+export default function AboutPage() {
     const navItems = [
         { name: "Home", id: "/" },
         { name: "Services", id: "services" },
@@ -33,18 +34,18 @@ export default function ContactPage() {
                     <NavbarLayoutFloatingInline
                         navItems={navItems}
                         brandName="Studio"
-                        button={{ text: "Get Started", href: "/contact" }}
+                        button={{ text: "Get in Touch", href: "/contact" }}
                     />
                 </div>
-                <div id="contact" data-section="contact">
-                    <ContactCTA
-                        tag="Contact Us"
-                        title="Let's Build Something Great"
-                        description="Reach out to discuss your project and see how we can help your brand grow."
-                        buttons={[
-                            { text: "Send Message", href: "#" }
+                <div id="about" data-section="about">
+                    <AboutMetric
+                        title="Our Story"
+                        metrics={[
+                            { icon: Users, label: "Team Members", value: "40+" },
+                            { icon: Globe, label: "Countries", value: "15" },
+                            { icon: Zap, label: "Projects", value: "500+" }
                         ]}
-                        background={{ variant: "canvas-reveal" }}
+                        metricsAnimation="slide-up"
                         useInvertedBackground={false}
                     />
                 </div>
