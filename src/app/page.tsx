@@ -183,8 +183,7 @@ export default function WebAgencyThemePage() {
                 <ContactText
                     text="Ready to transform your digital presence? Let's create something extraordinary together."
                     buttons={[
-                        { text: "Start a Project", href: "/contact" },
-                        { text: "Schedule a Call", href: "/contact" },
+                        { text: "Start Your Transformation", href: "/contact" },
                     ]}
                     background={{ variant: "canvas-reveal" }}
                     useInvertedBackground={false}
