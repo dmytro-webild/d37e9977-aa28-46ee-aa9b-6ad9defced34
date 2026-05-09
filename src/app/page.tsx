@@ -19,7 +19,7 @@ export default function WebAgencyThemePage() {
         { name: "Home", id: "home" },
         { name: "Services", id: "services" },
         { name: "Work", id: "work" },
-        { name: "Contact", id: "contact" },
+        { name: "Contact", id: "/contact" },
     ];
 
     return (
@@ -39,7 +39,7 @@ export default function WebAgencyThemePage() {
                 <NavbarLayoutFloatingInline
                     navItems={navItems}
                     brandName="Studio"
-                    button={{ text: "Get in Touch", href: "#contact" }}
+                    button={{ text: "Get in Touch", href: "/contact" }}
                 />
                 <HeroSplitKpi
                     background={{ variant: "radial-gradient" }}
@@ -55,13 +55,9 @@ export default function WebAgencyThemePage() {
                     ]}
                     buttons={[
                         {
-                            text: "Start Project",
-                            href: "#contact",
-                        },
+                            text: "Start Project",                            href: "/contact"},
                         {
-                            text: "View Work",
-                            href: "#work",
-                        },
+                            text: "View Work",                            href: "#work"},
                     ]}
                     avatars={[
                         { src: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero2.webp", alt: "Team member 1" },
@@ -87,14 +83,14 @@ export default function WebAgencyThemePage() {
                     ]}
                     marqueeClassName="md:mb-5"
                 />
-                <TextAbout
+                <div id="services"><TextAbout
                     title="We craft digital experiences that captivate audiences and drive meaningful results for ambitious brands worldwide."
                     buttons={[
                         { text: "Our Process", href: "#process" },
                         { text: "Meet the Team", href: "#team" },
                     ]}
                     useInvertedBackground={false}
-                />
+                /></div>
                 <FeatureCardNineteen
                     title="Our Services"
                     description="A proven methodology that delivers results consistently across every project."
@@ -102,37 +98,13 @@ export default function WebAgencyThemePage() {
                     tagIcon={Layers}
                     features={[
                         {
-                            tag: "Service 01",
-                            title: "01",
-                            subtitle: "Web Development",
-                            description: "Your website should be more than functional—it should resonate. We craft bespoke digital experiences that merge innovation with creativity, delivering intuitive, visually stunning platforms that captivate audiences, reflect your brand's essence, and adapt to future opportunities.",
-                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/process/process1.webp",
-                            imageAlt: "Web development",
-                        },
+                            tag: "Service 01",                            title: "01",                            subtitle: "Web Development",                            description: "Your website should be more than functional—it should resonate. We craft bespoke digital experiences that merge innovation with creativity, delivering intuitive, visually stunning platforms that captivate audiences, reflect your brand's essence, and adapt to future opportunities.",                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/process/process1.webp",                            imageAlt: "Web development"},
                         {
-                            tag: "Service 02",
-                            title: "02",
-                            subtitle: "Marketing",
-                            description: "Impactful marketing goes beyond visibility—it creates connections. We fuse creativity with analytics to craft adaptive strategies that engage your audience authentically, keeping your brand relevant and resonant while delivering measurable results in an ever-evolving digital world.",
-                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/process/process2.webp",
-                            imageAlt: "Marketing",
-                        },
+                            tag: "Service 02",                            title: "02",                            subtitle: "Marketing",                            description: "Impactful marketing goes beyond visibility—it creates connections. We fuse creativity with analytics to craft adaptive strategies that engage your audience authentically, keeping your brand relevant and resonant while delivering measurable results in an ever-evolving digital world.",                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/process/process2.webp",                            imageAlt: "Marketing"},
                         {
-                            tag: "Service 03",
-                            title: "03",
-                            subtitle: "Design",
-                            description: "Design is your brand's voice. We craft visuals and layouts that communicate purpose, inspire trust, and connect emotionally. By harmonizing artistry with intent, our designs transform user interactions into meaningful, memorable experiences that align with your identity.",
-                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/process/process3.webp",
-                            imageAlt: "Design",
-                        },
+                            tag: "Service 03",                            title: "03",                            subtitle: "Design",                            description: "Design is your brand's voice. We craft visuals and layouts that communicate purpose, inspire trust, and connect emotionally. By harmonizing artistry with intent, our designs transform user interactions into meaningful, memorable experiences that align with your identity.",                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/process/process3.webp",                            imageAlt: "Design"},
                         {
-                            tag: "Service 04",
-                            title: "04",
-                            subtitle: "Software Development",
-                            description: "We build custom software that evolves with your business. By addressing unique challenges, our tailored solutions streamline workflows, eliminate inefficiencies, and foster innovation—empowering you to scale, adapt, and maintain a competitive edge in an ever-changing landscape.",
-                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/process/process4.webp",
-                            imageAlt: "Software development",
-                        },
+                            tag: "Service 04",                            title: "04",                            subtitle: "Software Development",                            description: "We build custom software that evolves with your business. By addressing unique challenges, our tailored solutions streamline workflows, eliminate inefficiencies, and foster innovation—empowering you to scale, adapt, and maintain a competitive edge in an ever-changing landscape.",                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/process/process4.webp",                            imageAlt: "Software development"},
                     ]}
                     textboxLayout="default"
                     useInvertedBackground={false}
@@ -159,53 +131,13 @@ export default function WebAgencyThemePage() {
                     tagIcon={Star}
                     testimonials={[
                         {
-                            id: "1",
-                            name: "Sarah Johnson",
-                            date: "CEO, TechStart",
-                            title: "Transformed Our Digital Presence",
-                            quote: "Working with Studio was a game-changer for our startup. They delivered a website that not only looks stunning but converts visitors into customers at twice our previous rate.",
-                            tag: "Web Development",
-                            avatarSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero2.webp",
-                            avatarAlt: "Sarah Johnson",
-                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero2.webp",
-                            imageAlt: "TechStart project showcase",
-                        },
+                            id: "1",                            name: "Sarah Johnson",                            date: "CEO, TechStart",                            title: "Transformed Our Digital Presence",                            quote: "Working with Studio was a game-changer for our startup. They delivered a website that not only looks stunning but converts visitors into customers at twice our previous rate.",                            tag: "Web Development",                            avatarSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero2.webp",                            avatarAlt: "Sarah Johnson",                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero2.webp",                            imageAlt: "TechStart project showcase"},
                         {
-                            id: "2",
-                            name: "Michael Chen",
-                            date: "Founder, GrowthLab",
-                            title: "Exceeded All Expectations",
-                            quote: "The team's attention to detail and creative vision brought our brand to life in ways we never imagined. Our new platform has received incredible feedback from users.",
-                            tag: "Brand Design",
-                            avatarSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero3.webp",
-                            avatarAlt: "Michael Chen",
-                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero3.webp",
-                            imageAlt: "GrowthLab project showcase",
-                        },
+                            id: "2",                            name: "Michael Chen",                            date: "Founder, GrowthLab",                            title: "Exceeded All Expectations",                            quote: "The team's attention to detail and creative vision brought our brand to life in ways we never imagined. Our new platform has received incredible feedback from users.",                            tag: "Brand Design",                            avatarSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero3.webp",                            avatarAlt: "Michael Chen",                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero3.webp",                            imageAlt: "GrowthLab project showcase"},
                         {
-                            id: "3",
-                            name: "Emily Rodriguez",
-                            date: "Marketing Director, Elevate",
-                            title: "A True Partnership",
-                            quote: "From strategy to execution, Studio understood our vision and delivered beyond what we hoped for. The new website has become our most powerful marketing asset.",
-                            tag: "E-commerce",
-                            avatarSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero4.webp",
-                            avatarAlt: "Emil Svenson",
-                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero4.webp",
-                            imageAlt: "Elevate project showcase",
-                        },
+                            id: "3",                            name: "Emily Rodriguez",                            date: "Marketing Director, Elevate",                            title: "A True Partnership",                            quote: "From strategy to execution, Studio understood our vision and delivered beyond what we hoped for. The new website has become our most powerful marketing asset.",                            tag: "E-commerce",                            avatarSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero4.webp",                            avatarAlt: "Emil Svenson",                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero4.webp",                            imageAlt: "Elevate project showcase"},
                         {
-                            id: "4",
-                            name: "David Park",
-                            date: "CTO, InnovateCo",
-                            title: "Technical Excellence",
-                            quote: "The development team delivered a high-performance application that handles our complex requirements with ease. Their technical expertise is unmatched in the industry.",
-                            tag: "Web Application",
-                            avatarSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero5.webp",
-                            avatarAlt: "David Park",
-                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero5.webp",
-                            imageAlt: "InnovateCo project showcase",
-                        },
+                            id: "4",                            name: "David Park",                            date: "CTO, InnovateCo",                            title: "Technical Excellence",                            quote: "The development team delivered a high-performance application that handles our complex requirements with ease. Their technical expertise is unmatched in the industry.",                            tag: "Web Application",                            avatarSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero5.webp",                            avatarAlt: "David Park",                            imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/hero/hero5.webp",                            imageAlt: "InnovateCo project showcase"},
                     ]}
                     textboxLayout="default"
                     useInvertedBackground={false}
@@ -220,9 +152,7 @@ export default function WebAgencyThemePage() {
                     useInvertedBackground={false}
                     features={[
                         {
-                            title: "Discovery & Strategy",
-                            description: "We start by understanding your goals, audience, and market to build a roadmap tailored to your business.",
-                            media: { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/services/how1.webp", imageAlt: "Discovery and strategy" },
+                            title: "Discovery & Strategy",                            description: "We start by understanding your goals, audience, and market to build a roadmap tailored to your business.",                            media: { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/services/how1.webp", imageAlt: "Discovery and strategy" },
                             reverse: false,
                             items: [
                                 { icon: Code, text: "In-depth research and audits" },
@@ -231,9 +161,7 @@ export default function WebAgencyThemePage() {
                             ],
                         },
                         {
-                            title: "Design & Prototyping",
-                            description: "We translate strategy into visual concepts, iterating with you until every detail feels right.",
-                            media: { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/services/how2.webp", imageAlt: "Design and prototyping" },
+                            title: "Design & Prototyping",                            description: "We translate strategy into visual concepts, iterating with you until every detail feels right.",                            media: { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/services/how2.webp", imageAlt: "Design and prototyping" },
                             reverse: true,
                             items: [
                                 { icon: Palette, text: "Wireframes and mockups" },
@@ -242,9 +170,7 @@ export default function WebAgencyThemePage() {
                             ],
                         },
                         {
-                            title: "Build & Launch",
-                            description: "We develop, test, and deploy your project with precision, ensuring a smooth launch and measurable impact.",
-                            media: { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/services/how3.webp", imageAlt: "Build and launch" },
+                            title: "Build & Launch",                            description: "We develop, test, and deploy your project with precision, ensuring a smooth launch and measurable impact.",                            media: { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency/services/how3.webp", imageAlt: "Build and launch" },
                             reverse: false,
                             items: [
                                 { icon: TrendingUp, text: "Agile development sprints" },
@@ -257,8 +183,8 @@ export default function WebAgencyThemePage() {
                 <ContactText
                     text="Ready to transform your digital presence? Let's create something extraordinary together."
                     buttons={[
-                        { text: "Start a Project", href: "#contact" },
-                        { text: "Schedule a Call", href: "#call" },
+                        { text: "Start a Project", href: "/contact" },
+                        { text: "Schedule a Call", href: "/contact" },
                     ]}
                     background={{ variant: "canvas-reveal" }}
                     useInvertedBackground={false}
