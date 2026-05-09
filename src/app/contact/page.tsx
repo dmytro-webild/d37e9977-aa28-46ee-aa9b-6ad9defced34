@@ -4,8 +4,7 @@ import ReactLenis from "lenis/react";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from "@/components/navbar/NavbarLayoutFloatingInline";
 import ContactCTA from "@/components/sections/contact/ContactCTA";
-import { Twitter, Instagram, Linkedin } from "lucide-react";
-import FooterCard from "@/components/sections/footer/FooterCard";
+import FooterLogoReveal from "@/components/sections/footer/FooterLogoReveal";
 
 export default function ContactPage() {
     const navItems = [
@@ -33,6 +32,7 @@ export default function ContactPage() {
                     <NavbarLayoutFloatingInline
                         navItems={navItems}
                         brandName="Studio"
+                        button={{ text: "Get Started", href: "/contact" }}
                     />
                 </div>
                 <div id="contact" data-section="contact">
@@ -48,7 +48,7 @@ export default function ContactPage() {
                     />
                 </div>
                 <div id="footer" data-section="footer">
-                    <FooterCard
+                    <FooterLogoReveal
                         logoText="Studio"
                         leftLink={{ text: "Privacy", href: "/privacy" }}
                         rightLink={{ text: "Terms", href: "/terms" }}
