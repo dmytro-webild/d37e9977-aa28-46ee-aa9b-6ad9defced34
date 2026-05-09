@@ -8,9 +8,10 @@ import FooterLogoReveal from "@/components/sections/footer/FooterLogoReveal";
 
 export default function ContactPage() {
     const navItems = [
-        { name: "Home", id: "home" },
+        { name: "Home", id: "/" },
         { name: "Services", id: "services" },
         { name: "Work", id: "work" },
+        { name: "About", id: "/about" },
         { name: "Contact", id: "/contact" },
     ];
 
