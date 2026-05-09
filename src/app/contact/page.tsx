@@ -29,12 +29,13 @@ export default function ContactPage() {
             headingFontWeight="medium"
         >
             <ReactLenis root>
-                <NavbarLayoutFloatingInline
-                    navItems={navItems}
-                    brandName="Studio"
-                    button={{ text: "Get in Touch", href: "/contact" }}
-                />
-                <div id="contact">
+                <div id="nav" data-section="nav">
+                    <NavbarLayoutFloatingInline
+                        navItems={navItems}
+                        brandName="Studio"
+                    />
+                </div>
+                <div id="contact" data-section="contact">
                     <ContactCTA
                         tag="Contact Us"
                         title="Let's Build Something Great"
@@ -43,17 +44,16 @@ export default function ContactPage() {
                             { text: "Send Message", href: "#" }
                         ]}
                         background={{ variant: "canvas-reveal" }}
+                        useInvertedBackground={false}
                     />
                 </div>
-                <FooterCard
-                    logoText="Studio"
-                    copyrightText="© 2025 Studio. All rights reserved."
-                    socialLinks={[
-                        { icon: Twitter, href: "https://twitter.com", ariaLabel: "Follow us on Twitter" },
-                        { icon: Instagram, href: "https://instagram.com", ariaLabel: "Follow us on Instagram" },
-                        { icon: Linkedin, href: "https://linkedin.com", ariaLabel: "Connect on LinkedIn" },
-                    ]}
-                />
+                <div id="footer" data-section="footer">
+                    <FooterCard
+                        logoText="Studio"
+                        leftLink={{ text: "Privacy", href: "/privacy" }}
+                        rightLink={{ text: "Terms", href: "/terms" }}
+                    />
+                </div>
             </ReactLenis>
         </ThemeProvider>
     );
